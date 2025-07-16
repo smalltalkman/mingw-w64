@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: master
+          token: ${{ secrets.REPOSITORY_TOKEN }}
       - name: Fast-Forward
         run: |
           git remote add upstream https://git.code.sf.net/p/mingw-w64/mingw-w64
