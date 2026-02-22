@@ -32,6 +32,10 @@ static void wrap_pthread_mutex_unlock (void *ptr)
   pthread_mutex_unlock ((pthread_mutex_t *) ptr);
 }
 
+#if defined(__i386__)
+/* Align ESP on 16-byte boundaries. */
+__attribute__((force_align_arg_pointer))
+#endif
 unsigned int __stdcall
 Win32thread(void * arg)
 {

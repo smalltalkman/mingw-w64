@@ -95,6 +95,10 @@ struct bag_t_ {
 
 static bag_t threadbag[NUMTHREADS + 1];
 
+#if defined(__i386__)
+/* Align ESP on 16-byte boundaries. */
+__attribute__((force_align_arg_pointer))
+#endif
 unsigned int __stdcall
 Win32thread(void * arg)
 {

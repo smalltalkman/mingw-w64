@@ -15,6 +15,10 @@ __int64 timespec_diff_as_ms(struct timespec *__old, struct timespec *__new)
          + (__new->tv_nsec - __old->tv_nsec) / POW10_6;
 }
 
+#if defined(__i386__)
+/* Align ESP on 16-byte boundaries. */
+__attribute__((force_align_arg_pointer))
+#endif
 unsigned __stdcall start_address(void *dummy)
 {
     int counter = 0;
