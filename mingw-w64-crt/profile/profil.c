@@ -72,6 +72,10 @@ print_prof (struct profinfo *p)
 
 static DWORD CALLBACK profthr_func (LPVOID);
 
+#if defined(__i386__)
+/* We need to make sure that we align the stack to 16 bytes for the sake of SSE */
+__attribute__((force_align_arg_pointer))
+#endif
 static DWORD CALLBACK
 profthr_func (LPVOID arg)
 {
