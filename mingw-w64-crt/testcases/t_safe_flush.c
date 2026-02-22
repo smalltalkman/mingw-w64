@@ -14,6 +14,10 @@
 
 CRITICAL_SECTION cs;
 
+#if defined(__i386__)
+/* We need to make sure that we align the stack to 16 bytes for the sake of SSE */
+__attribute__((force_align_arg_pointer))
+#endif
 static DWORD WINAPI thread_main(LPVOID user_data) {
     HANDLE handle_event = (HANDLE) user_data;
 
