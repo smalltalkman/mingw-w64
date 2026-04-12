@@ -2226,3 +2226,13 @@ GetFileInformationByName@16
 ; LogUnexpectedCodepath@4
 ReleasePseudoConsole@4
 TlsGetValue2@4
+
+; This is list of symbols added in Windows 11 2025 Update (Hudson Valley 2 / 25H2) (WoW64 version)
+; BasepGetPackageActivationTokenForSxS3@16
+CreateDirectory2A@20
+CreateDirectory2W@20
+CreateFile3@20
+DeleteFile2A@8
+DeleteFile2W@8
+RemoveDirectory2A@8
+RemoveDirectory2W@8

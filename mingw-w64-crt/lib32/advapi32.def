@@ -1057,4 +1057,11 @@ LsaValidateProcUniqueLuid@4
 ; In Windows 11 2023 Update (Sun Valley 3 / 23H2) (WoW64 version) there was no new symbol
 
 ; This is list of symbols added in Windows 11 2024 Update (Hudson Valley / 24H2) (WoW64 version)
-; LsaIOpenPolicyWithCreds@24
+; LsaIOpenPolicyWithCreds@24 ; removed in Windows 11 2025 Update (Hudson Valley 2 / 25H2)
+
+; This is list of symbols added in Windows 11 2025 Update (Hudson Valley 2 / 25H2) (WoW64 version)
+; LogonSecondaryUserIntoSessionW@20
+; LsaPurgeLocalSystemAccessTable@0
+LsaQueryLocalSystemAccess@8
+LsaQueryLocalSystemAccessAll@4
+LsaSetLocalSystemAccess@4

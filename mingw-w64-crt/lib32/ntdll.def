@@ -2907,3 +2907,9 @@ ZwSubmitIoRing@16
 ; ZwAlertThreadByThreadIdEx@8
 ; ZwSetEventEx@12
 ; ZwWow64GetCurrentProcessorNumber@0
+
+; This is list of symbols added in Windows 11 2025 Update (Hudson Valley 2 / 25H2) (WoW64 version)
+; ApiSetGetImplementationHost@12
+; ApiSetQuerySchema@8
+; RtlQueryAllInternalRuntimeFeatureConfigurations@20
+; RtlQueryInternalFeatureConfiguration@16
