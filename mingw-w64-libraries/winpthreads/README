@@ -1,10 +1,18 @@
-The Winpthreads Library
------------------------
+# The Winpthreads Library
 
 This library provides POSIX threading APIs for mingw-w64.
 
+## Linking Against Winpthreads
+
 For maximum compatibility, winpthreads headers expose APIs without the
-`dllimport` attribute by default. If your program is linked against the
-DLL, you may define the `WINPTHREADS_USE_DLLIMPORT` macro to add the
-`dllimport` attribute to all APIs, which makes function calls to them a
-bit more efficient.
+`dllimport` attribute by default.
+
+If your program is linked against the DLL, you may define the macro
+`WINPTHREADS_USE_DLLIMPORT` to add `dllimport` attributes to all APIs,
+which makes function calls to them a bit more efficient.
+
+Be careful when you build static libraries; you probably do not want to define
+`WINPTHREADS_USE_DLLIMPORT` unconditionally, to ensure that your code can link
+against either shared or static winpthreads. Note that winpthreads does not
+export any variables, which means that `dllimport` is not requred, with both
+MSVC and mingw-w64 toolchains.
