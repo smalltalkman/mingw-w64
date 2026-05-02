@@ -1898,6 +1898,45 @@ F_I386(_libm_sse2_sin_precise)
 F_I386(_libm_sse2_sqrt_precise)
 F_I386(_libm_sse2_tan_precise)
 
+; There are no new symbols in any Windows 10 system version (except i386-chpe32 below)
+
+; These symbols were added in arm64 Windows 10 but only for i386-chpe32 OS system version of msvcrt.dll
+; All these i386 symbols are not available on i386, x64 and arm32 Windows systems
+; F_I386(__BuildCatchObjectCHPE) ; disabled i386-chpe32
+; F_I386(__BuildCatchObjectHelperCHPE) ; disabled i386-chpe32
+; F_I386(__C_specific_handler) ; disabled i386-chpe32
+; F_I386(__CxxFrameHandler3Hybrid) ; disabled i386-chpe32
+; F_I386(__TypeMatchCHPE) ; disabled i386-chpe32
+; F_I386(_memcpy_strict_align) ; disabled i386-chpe32
+; F_I386(_chgsignf) ; i386 chgsignf provided by emu
+; F_I386(_copysignf) ; i386 copysignf provided by emu
+; F_I386(_finitef) ; i386 finitef provided by emu
+; F_I386(_hypotf) ; i386 hypotf provided by emu
+; F_I386(_local_unwind) ; disabled i386-chpe32
+; F_I386(_logbf) ; i386 logbf provided by emu
+; F_I386(_setjmp_arm64) ; disabled i386-chpe32
+; F_I386(_ungetc_nolock) ; also available on x64 systems for x64 binaries since Windows 11 21H2 ; disabled i386-chpe32
+; F_I386(acosf) ; i386 acosf provided by emu
+; F_I386(asinf) ; i386 asinf provided by emu
+; F_I386(atan2f) ; i386 atan2f provided by emu
+; F_I386(atanf) ; i386 atanf provided by emu
+; F_I386(ceilf) ; i386 ceilf provided by emu
+; F_I386(cosf) ; i386 cosf provided by emu
+; F_I386(coshf) ; i386 coshf provided by emu
+; F_I386(expf) ; i386 expf provided by emu
+; F_I386(fabsf) ; i386 fabsf provided by emu
+; F_I386(floorf) ; i386 floorf provided by emu
+; F_I386(fmodf) ; i386 fmodf provided by emu
+; F_I386(log10f) ; i386 log10f provided by emu
+; F_I386(logf) ; i386 logf provided by emu
+; F_I386(modff) ; i386 modff provided by emu
+; F_I386(powf) ; i386 powf provided by emu
+; F_I386(sinf) ; i386 sinf provided by emu
+; F_I386(sinhf) ; i386 sinhf provided by emu
+; F_I386(sqrtf) ; i386 sqrtf provided by emu
+; F_I386(tanf) ; i386 tanf provided by emu
+; F_I386(tanhf) ; i386 tanhf provided by emu
+
 ; These symbols were added in Windows 11 21H2 OS system version of msvcrt.dll
 #ifdef __i386__
 ; protected: virtual void __thiscall bad_cast::_Doraise(void)const
