@@ -1522,9 +1522,7 @@ void _fpreset (void);
 
 #if defined(__i386__)
 /* Align ESP on 16-byte boundaries. */
-#  if defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 2))
 __attribute__((force_align_arg_pointer))
-#  endif
 #endif
 unsigned __stdcall
 pthread_create_wrapper (void *args)
